@@ -5,8 +5,21 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'Template HTML CSS Vue',
+            message: 'To do list',
+            myData:[]
         };
+    },
+    methods:{
+        searchData(){
+            axios.get("http://localhost/Boolean/PrimaParteBackEnd/php-todo-list-json/backEnd/index.php")
+            .then((response) => {
+                this.myData = response.data;
+                console.log(this.myData);
+            })
+        }
+    },
+    mounted(){
+        this.searchData();
     }
   // Monto l'istanza di Vue in pagina
 }).mount('#app');
