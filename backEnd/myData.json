@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Fare la spesa",
+        "description": "Prendere l'auto ed andare al supermercato per fare la spesa",
+        "done": true
+    },
+    {
+        "name": "Fare benzina",
+        "description": "Prendere l'auto ed andare dal benzinaio per fare rifornimento",
+        "done": true
+    },
+    {
+        "name": "Andare in palestra di roccia",
+        "description": "Preparare zaino con materiale, prendere l'auto ed andare alla palestra di roccia",
+        "done": false
+    },
+    {
+        "name": "Fare jogging",
+        "description": "Indossare abbigliamento adeguato, uscire di casa e fare il percorso disegnato",
+        "done": false
+    },
+    {
+        "name": "Fare l'esercizio assegnato da Boolean",
+        "description": "Accendere il computer, accedere a visual studio e programmare",
+        "done": false
+    }
+]
