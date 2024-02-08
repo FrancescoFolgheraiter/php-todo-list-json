@@ -12,14 +12,14 @@
     <body>
         
         <div id="app">
-            <h1 class="text-center">
+            <h1 class="text-center text-primary text-uppercase text-opacity-50 m-5">
                 {{ message }}
             </h1>
             
             <div class="container">
                 <div>
-                    <ul>
-                        <li v-for="(elem, i) in myData" :key="i" :class="{
+                    <ul class="list-group">
+                        <li class="list-group-item"v-for="(elem, i) in myData" :key="i" :class="{
                             'text-decoration-line-through': elem.done==true
                         }">
                             {{ elem.name }}
