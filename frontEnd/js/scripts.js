@@ -16,6 +16,10 @@ createApp({
                 this.myData = response.data;
                 console.log(this.myData);
             })
+        },
+        reverseDone(j){
+            console.log("hai clicclato sull'elemento n:",j)
+            this.myData[j].done = !(this.myData[j].done);
         }
     },
     mounted(){
