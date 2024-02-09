@@ -18,5 +18,9 @@
     {
         "name": "Fare l'esercizio assegnato da Boolean",
         "done": false
+    },
+    {
+        "name": "ciao",
+        "done": false
     }
 ]

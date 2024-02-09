@@ -5,8 +5,9 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'To do list',
-            myData:[]
+            message: 'Todo list php',
+            myData:[],
+            newTask: "",
         };
     },
     methods:{
@@ -17,9 +18,36 @@ createApp({
                 console.log(this.myData);
             })
         },
+        addTodoJson(){
+            axios.post("http://localhost/Boolean/PrimaParteBackEnd/php-todo-list-json/backEnd/putNewTodo.php",
+                {
+                    name : "ciao"
+                }
+                ,
+                {
+                    headers: {
+                      'Content-Type': 'multipart/form-data'
+                    }
+                }
+            )
+            .then((response) => {
+                console.log(response)
+                this.addTask();
+            })
+        },
         reverseDone(j){
             console.log("hai clicclato sull'elemento n:",j)
             this.myData[j].done = !(this.myData[j].done);
+        },
+        addTask(){
+            if(this.newTask.trim().length > 3){
+                this.myData.push({name:this.newTask, done: false,})
+            }
+            this.newTask = "";
+            console.log(this.myData)
+        },
+        deleteTodo(j){
+            this.myData.splice(j,1);
         }
     },
     mounted(){
