@@ -56,13 +56,25 @@ createApp({
                 this.myData.splice(j,1);
             })
         },
-        /*
         reverseDone(j){
             console.log("hai clicclato sull'elemento n:",j)
             this.myData[j].done = !(this.myData[j].done);
+            axios.post("http://localhost/boolean/PrimaParteBackEnd/php-todo-list-json/backEnd/updateDoneData.php",
+            {
+                index : j
+            }
+            ,
+            {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+        )
+        .then((response) => {
+            console.log(response);
+        })
         }
         ,
-        */
         addTask(){
             if(this.newTask.trim().length > 3){
                 this.myData.push({name:this.newTask, done: false,})
