@@ -30,12 +30,18 @@
                         <li class="list-group-item d-flex justify-content-between " v-for="(elem, i) in myData" :key="i"  :class="{
                             'text-decoration-line-through': elem.done==true
                         }">
-                           <span @click ="reverseDone(i)">
-                                {{ elem.name }}
-                            </span>
-                           <span @click="deleteTask(i)">
-                            <i class="fa-solid fa-trash-can"></i>
-                           </span>
+                            <div>
+                                <span v-if="!flagEdit[i]"  @click ="reverseDone(i)">
+                                    {{ elem.name }}
+                                </span>
+                                <input v-if="flagEdit[i]" type="text" :placeholder="elem.name" v-model="this.myData[i].name">
+                            </div>    
+                            <div>
+                                <button type = "button" class="btn btn-outline-secondary me-3" @click = "editTask(i)">Edit</button>
+                                <span @click = "deleteTask(i)">
+                                 <i class="fa-solid fa-trash-can"></i>
+                                </span>
+                            </div>
                         </li>
                     </ul>
                 </div>

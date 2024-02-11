@@ -1,15 +1,7 @@
 [
     {
-        "name": "Fare la spesa",
-        "done": true
-    },
-    {
-        "name": "Fare benzina",
-        "done": true
-    },
-    {
         "name": "Andare in palestra di roccia",
-        "done": false
+        "done": true
     },
     {
         "name": "Fare jogging",
@@ -17,6 +9,26 @@
     },
     {
         "name": "Fare l'esercizio assegnato da Boolean",
+        "done": false
+    },
+    {
+        "name": "portare fuori il cane",
+        "done": false
+    },
+    {
+        "name": "prova a ridere",
+        "done": true
+    },
+    {
+        "name": "dsadsadsa",
+        "done": false
+    },
+    {
+        "name": "dsadsadsa",
+        "done": false
+    },
+    {
+        "name": "321321321",
         "done": false
     }
 ]
