@@ -13,8 +13,11 @@
     //cancello la posizione [MANIPOLI I DATI]
     unset($contentData[$index['indice']]);
 
+    //evito la modifica della mia struttura dati tramite questa fuznione
+    //che butta le chiavi e non mi midifica la struttura
+    $fixedContentData = array_values($contentData);
     //riconverto i dati in json
-    $newContentDataJson = json_encode($contentData);
+    $newContentDataJson = json_encode($fixedContentData);
     //scrivo nel file json
     file_put_contents("myData.json", $newContentDataJson);
   
